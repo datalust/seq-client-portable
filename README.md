@@ -1,4 +1,4 @@
-seq-client-portable
+Seq.Client.Portable
 ===================
 
 A portable (WP/iOS/Android) sink for Serilog that writes events over HTTP/S to Seq. In time it's hoped that this will feed back into the "official" Seq client that ships as _Serilog.Sinks.Seq_.
