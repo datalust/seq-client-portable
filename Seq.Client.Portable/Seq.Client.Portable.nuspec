@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Seq.Client.Portable</id>
+    <version>$version$</version>
+    <authors>Continuous IT Pty Ltd and Serilog Contributors</authors>
+    <description>A portable version of Serilog.Sinks.Seq that can be used in Windows Phone 
+      and Xamarin iOS/Android mobile apps.</description>
+    <language>en-US</language>
+    <projectUrl>https://github.com/continuousit/seq-client-portable</projectUrl>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <iconUrl>https://getseq.net/images/seq-client-serilog.png</iconUrl>
+    <tags>seq serilog logging</tags>
+  </metadata>
+</package>
