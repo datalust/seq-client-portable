@@ -1,9 +1,13 @@
 Seq.Client.Portable
 ===================
 
+[![Build status](https://ci.appveyor.com/api/projects/status/2b5u0t0cyuenc478?svg=true)](https://ci.appveyor.com/project/NicholasBlumhardt/seq-client-portable)
+
 A portable (WP/iOS/Android) sink for Serilog that writes events over HTTP/S to Seq. In time it's hoped that this will feed back into the "official" Seq client that ships as _Serilog.Sinks.Seq_.
 
 The primary goal of this package is to provide great development-time logging, although there's nothing technically preventing this from being used on deployed devices.
+
+**To raise issues** with this library please use the [issue tracker here](https://github.com/continuousit/seq-releases/issues).
 
 Usage
 -----
