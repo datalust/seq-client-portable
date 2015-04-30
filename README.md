@@ -46,9 +46,4 @@ var serverUrl = Device.OnPlatform(
   iOS: "http://my-seq.example.com");
 ```
 
-Known Issues
-------------
-
-Serilog's still has some known issues on iOS, namely, `Nullable<T>` properties can't currently be represented, and dictionary values are not able to be serialized. There's an [open issue covering this](https://github.com/serilog/serilog/pull/125).
-
 
