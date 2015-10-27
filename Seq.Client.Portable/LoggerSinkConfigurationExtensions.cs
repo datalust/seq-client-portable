@@ -31,7 +31,8 @@ namespace Seq
             LogEventLevel restrictedToMinimumLevel = LevelAlias.Minimum,
             int batchPostingLimit = PortableSeqSink.DefaultBatchPostingLimit,
             TimeSpan? period = null,
-            string apiKey = null, IHttpClientFactory httpClientFactory = null)
+            string apiKey = null, 
+            IHttpClientFactory httpClientFactory = null)
         {
             if (loggerSinkConfiguration == null) throw new ArgumentNullException("loggerSinkConfiguration");
             if (serverUrl == null) throw new ArgumentNullException("serverUrl");
