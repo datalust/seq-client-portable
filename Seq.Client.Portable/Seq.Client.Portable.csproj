@@ -34,6 +34,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Client\Portable\DefaultHttpClientFactory.cs" />
+    <Compile Include="Client\Portable\IHttpClientFactory.cs" />
     <Compile Include="Client\Portable\PortableBatchedConnectionStatus.cs" />
     <Compile Include="Client\Portable\PortablePeriodicBatchingSink.cs" />
     <Compile Include="Client\Portable\PortableSeqApi.cs" />

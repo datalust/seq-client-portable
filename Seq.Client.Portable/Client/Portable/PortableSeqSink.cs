@@ -27,6 +27,7 @@ namespace Seq.Client.Portable
     class PortableSeqSink : PortablePeriodicBatchingSink
     {
         readonly string _apiKey;
+        readonly IHttpClientFactory _httpClientFactory;
         readonly HttpClient _httpClient;
         const string BulkUploadResource = "api/events/raw";
         const string ApiKeyHeaderName = "X-Seq-ApiKey";
@@ -35,17 +36,18 @@ namespace Seq.Client.Portable
         public const int DefaultBatchPostingLimit = 1000;
         public static readonly TimeSpan DefaultPeriod = TimeSpan.FromSeconds(2);
 
-        public PortableSeqSink(string serverUrl, string apiKey, int batchPostingLimit, TimeSpan period)
+        public PortableSeqSink(string serverUrl, string apiKey, int batchPostingLimit, TimeSpan period, IHttpClientFactory httpClientFactory)
             : base(batchPostingLimit, period)
         {
             if (serverUrl == null) throw new ArgumentNullException("serverUrl");
             _apiKey = apiKey;
+            _httpClientFactory = httpClientFactory;
 
             var baseUri = serverUrl;
             if (!baseUri.EndsWith("/"))
                 baseUri += "/";
 
-            _httpClient = new HttpClient { BaseAddress = new Uri(baseUri) };
+            _httpClient = _httpClientFactory.CreateHttpClient(new Uri(baseUri));
         }
 
         protected override void Dispose(bool disposing)
